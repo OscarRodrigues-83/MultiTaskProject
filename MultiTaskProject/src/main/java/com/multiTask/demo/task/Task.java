@@ -24,6 +24,12 @@ public class Task {
         this.status = "PENDENTE";
     }
 
+    public Task(String description, String taskName) {
+        this.description = description;
+        this.status = "PENDENTE";
+        this.taskName = taskName;
+    }
+
     public String getDescription() {
         return description;
     }

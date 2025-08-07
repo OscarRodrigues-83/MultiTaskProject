@@ -1,4 +1,4 @@
-package com.multiTask.demo.client;
+package com.multiTask.demo.user;
 
 import java.util.List;
 
@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "api/v1/client")
 @RestController
 
-public class ClientController {
-    private final ClientService client;
-
+public class UserController {
     @Autowired
-    public ClientController(ClientService client) {
-        this.client = client;
+
+    private final UserService user;
+
+    public UserController(UserService client) {
+        this.user = client;
     }
 
     @GetMapping
-    public List<Client> getClient() {
-        return client.getClient();
+    public List<User> getUser() {
+        return user.getUser();
     }
 
 }

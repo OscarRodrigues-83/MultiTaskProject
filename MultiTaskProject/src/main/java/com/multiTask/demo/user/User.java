@@ -1,4 +1,4 @@
-package com.multiTask.demo.client;
+package com.multiTask.demo.user;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Client {
+public class User {
     private String userName;
     private String email;
     @Id
@@ -18,16 +18,16 @@ public class Client {
     private int age;
     private LocalDate birth_date;
 
-    public Client() {
+    public User() {
     }
-    public Client(String userName, String email, LocalDate birth_date) {
+    public User(String userName, String email, LocalDate birth_date) {
         this.userName = userName;
         this.email = email;
         this.age = Period.between(LocalDate.now(), birth_date).getYears();
         this.birth_date = birth_date;
     }
 
-    public Client(int id, String userName, String email, LocalDate birth_date) {
+    public User(long id, String userName, String email, LocalDate birth_date) {
 
         this.userName = userName;
         this.id = id;
