@@ -19,7 +19,7 @@ public class Task {
     private long id;
     @ManyToOne
     @JoinColumn( name = "whiteboard_ID")
-    private WhiteBoard whiteBoardId;
+    private WhiteBoard whiteBoard;
 
     public Task() {
     }

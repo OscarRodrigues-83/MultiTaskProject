@@ -21,7 +21,7 @@ public class WhiteBoard {
     @JoinColumn(name = "user_id")
     private User user;
     
-    @OneToMany(mappedBy = "whiteboard_ID", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "whiteBoard", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> taskList = new ArrayList<>();
     private String boardName;
     
