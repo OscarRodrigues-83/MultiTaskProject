@@ -1,4 +1,4 @@
-package com.multiTask.demo.user;
+package com.multiTask.demo.entities;
 
 import java.time.LocalDate;
 import java.util.List;

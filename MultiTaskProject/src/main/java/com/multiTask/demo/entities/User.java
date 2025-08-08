@@ -1,15 +1,23 @@
-package com.multiTask.demo.user;
+package com.multiTask.demo.entities;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.multiTask.demo.board.WhiteBoard;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class User {
+    @OneToMany(mappedBy = "user_ID", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<WhiteBoard> boardList = new ArrayList<>();
     private String userName;
     private String email;
     @Id
@@ -20,6 +28,7 @@ public class User {
 
     public User() {
     }
+
     public User(String userName, String email, LocalDate birth_date) {
         this.userName = userName;
         this.email = email;
@@ -51,7 +60,7 @@ public class User {
     @Override
     public String toString() {
         return "{ userName= " + userName + ", email = " + email + ", id = " + id + ", age = " + age + ", birth_date = "
-         + birth_date + " }";
+                + birth_date + " }";
     }
 
     public String getuserName() {

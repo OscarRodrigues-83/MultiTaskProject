@@ -1,4 +1,4 @@
-package com.multiTask.demo.user;
+package com.multiTask.demo.entities;
 
 import java.util.List;
 
