@@ -8,7 +8,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Task {
     private String description;
@@ -21,9 +28,6 @@ public class Task {
     @JoinColumn( name = "whiteboard_ID")
     private WhiteBoard whiteBoard;
 
-    public Task() {
-    }
-
     public Task(String taskName, String description, long id) {
         this.description = description;
         this.taskName = taskName;
@@ -31,42 +35,5 @@ public class Task {
         this.status = "PENDENTE";
     }
 
-    public Task(String description, String taskName) {
-        this.description = description;
-        this.status = "PENDENTE";
-        this.taskName = taskName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getTaskName() {
-        return taskName;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public void setTaskName(String taskName) {
-        this.taskName = taskName;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
 }
