@@ -1,4 +1,4 @@
-package com.multiTask.demo.entities;
+package com.multiTask.demo.controller;
 
 import java.util.List;
 
@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.multiTask.demo.modal.User;
+import com.multiTask.demo.service.UserService;
 
 @RequestMapping(path = "api/v1/client")
 @RestController

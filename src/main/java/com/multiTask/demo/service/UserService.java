@@ -1,9 +1,11 @@
-package com.multiTask.demo.entities;
+package com.multiTask.demo.service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import com.multiTask.demo.modal.User;
 
 @Service
 public class UserService {
